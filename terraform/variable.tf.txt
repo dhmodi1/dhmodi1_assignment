@@ -1,0 +1,48 @@
+variable "deployment_region" {
+
+  default = "us-east-1"
+}
+
+variable "server_ami" {
+
+  type    = string
+  default = "ami-0427090fd1714168b"
+}
+
+
+variable "server_instance_type" {
+
+  type    = string
+  default = "t2.micro"
+}
+
+
+variable "mysql_docker_repo" {
+
+  type    = string
+  default = "database_docker"
+}
+
+
+variable "application_docker_repo" {
+
+  type    = string
+  default = "webapp_docker"
+}
+
+variable "network_vpc_id" {
+
+  default = "vpc-0e2abe2011aa6570b"
+  type    = string
+}
+
+variable "subnet_cidr" {
+  default = "172.31.64.0/20"
+  type    = string
+}
+
+variable "availability_zone" {
+  description = "The availability zone where the subnet will be created"
+  default     = "us-east-1a"
+  type        = string
+}
