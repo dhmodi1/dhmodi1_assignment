@@ -1,5 +1,6 @@
 name: Build and Push Docker Images
 
+# Step-1
 on:
   push:
     branches: [ main ] 
@@ -53,4 +54,3 @@ jobs:
           cd Application
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-
