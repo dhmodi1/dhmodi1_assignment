@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "aws" {
-  region = var.deployment_region
+  region = "us-east-1"
 }
 
 resource "aws_subnet" "web_app_subnet" {
